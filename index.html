@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="script.js"></script>
+  <title>Sprint 01 Encryptor</title>
+</head>
+<body>
+  <header>
+    <div class="head">
+      <img id="logo" src="/Pics/Logo.png" alt="logo">
+      <h1 id="title">Message <br>Encryptor</h1>
+      <img id="logob" src="/Pics/Logobmax.png" alt="logobmax">
+    </div>
+  </header>
+  <main class="content">
+    <div class="up">
+      <input type="text" id="inputText" placeholder="▶️ Input text here.">
+      <!--onfocus="" onblur="verify(this)"-->
+    </div>
+    <p id="phar">⚠ Only lowcase and without accents!</p>
+    <div class="buttons">
+      <button type="button" id="btnEncrypt">Encrypt</button>
+      <button type="button" id="btnDecrypt">Decrypt</button>
+      <button type="button" id="btnCopy">Copy</button>
+    </div>
+    <div class="down">      
+      <textarea id="textResult" name="result" cols="30" rows="10"
+        readonly>Please, enter the text above 🔼 to encrypt or decript it.</textarea>
+      <img id="question" src="/Pics/pregunta.png" alt="Question">
+      <img id="answer" src="/Pics/correcto.png" alt ="Correct">
+      <img id="secure" src="/Pics/secure.png" alt ="secure">
+    </div>
+    <h1 id="alert">¡No message found!</h1>
+  </main>
+  <footer class="pie">
+    <h1 id="rights">© 2022 Juan-K Copyright</h1>
+    <a href="https://github.com/Joaokld3" rel="noreferrer" target="_blank">
+      <i class="social"></i>Github</a>
+    <a href="https://www.linkedin.com/in/juan-carlos-larrota-a01b05216/" rel="noreferrer" target="_blank">
+      <i class="social"></i>LinkedIn</a>
+  </footer>
+</body>
+<script>
+  function verify(control) {//duty funtion for input something :)
+    if (control.value == "") {
+      alert("Please input any text")
+    }
+  }
+  inputText = document.querySelector("#inputText");//this is for focus the cursor at the begining
+  inputText.focus();
+  var btne = document.querySelector("#btnEncrypt");//returns a single node if a match is found with the search criteria
+  btne.onclick = encrypt;//activates the encryption function when the mouse button is pressed
+  var btnd = document.querySelector("#btnDecrypt");
+  btnd.onclick = decrypt;
+  var btnc = document.querySelector("#btnCopy");
+  btnc.onclick = copy;
+</script>
+</html>
