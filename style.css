@@ -7,7 +7,7 @@ body {
   font-family: 'DynaPuff', cursive;  background-image: url(https://c.tenor.com/eeEA_cEAEbQAAAAC/stars-star.gif);  margin: 1% 1% 1% 1%;
 }
 .head {  
-  display: flex;  justify-content: center;  margin: 0 0 3% 0; width: 100%;height: auto%;
+  display: flex;  justify-content: center;  margin: 0 0 1% 0; width: 100%;height: auto;
 }
 #logo{
   margin-right: 2rem;
@@ -28,7 +28,7 @@ color: #c78c19;    text-decoration: underline;
   float: left;  width: 100%;  height: 120px;
 }
 #inputText{
-  width: 60%;  height: 85%;  margin:  0 2% 2% 20%; border-radius: 2rem; border: 3px white; border-style: double;text-align: center; background-color: transparent;color: aliceblue;font-family: 'DynaPuff', cursive; font-size: 16px;
+  width: 60%;  height: 85%;  margin:  0 2% 2% 20%; border-radius: 1rem; border: 3px white; border-style: double;text-align: center; background-color: transparent;color: aliceblue;font-family: 'DynaPuff', cursive; font-size: 16px;
 }
 .buttons{
   margin: 1% 0 0 0;  display: flex;  justify-content: center; 
@@ -58,7 +58,7 @@ color: #c78c19;    text-decoration: underline;
   text-align: center;  font-size: 10px;margin-top: 0;  color: aliceblue;
 }
 .down{
-  display: flex;  justify-content: center;  width: 100%;  height: auto; margin: 20px 0 20px 0 ;     
+  display: flex;  justify-content: center;  width: 100%;  height: auto; margin: 25px 0 5px 0 ;     
 }
 #question{
   width: auto; height: 180px; margin: 0 2% 0 2%;  
@@ -70,20 +70,67 @@ color: #c78c19;    text-decoration: underline;
   width: auto; height: 180px; margin: 0 2% 0 2%; display: none; 
 }
 #textResult{
-  width:45%;  height: auto;  justify-content: center;  text-align: center;  border: 3px white;  border-style: double;  border-radius: 1rem; background-color: transparent ;color: aliceblue; font-size: 16px;font-family: 'DynaPuff', cursive;
+  width:40%;  height: 50%;  justify-content: center;  text-align: center;  border: 3px white;  border-style: double;  border-radius: 1rem; background-color: transparent ;color: aliceblue; font-size: 16px;font-family: 'DynaPuff', cursive;
 }
 #alert{
-  text-align: center; font-size: 18px;margin-top: 3px 0 10px 100px; color:crimson;
-}
-.pie{
-  text-align: center; height: 30px;color: aliceblue;font-size: 10px; 
+  text-align: center; font-size: 23px; margin-bottom: 20px; color:crimson;
 }
 #rights{
-  margin: 10px 2px 2px 2px;
+  text-align: center;color: whitesmoke; font-size: 10px;
 }
-.social{
-  margin: 1em 1em 0 1em;
+.pie{
+  display: flex; position:sticky ; justify-content: center;	font-size: 2rem; align-items: center;	z-index: 100;
+}
+.icon {
+	color: white;	text-decoration: none;	padding: .7rem;	display: flex;	transition: all .5s;
+}
+.icon-github {
+	background: #000000;
+}
+.icon-linkedin {
+	background: #0d57f8;  
+}
+.icon:first-child {
+	border-radius: 1rem 0 0 0;
+}
+.icon:last-child {
+	border-radius: 0 1rem 0 0;
+}
+.icon:hover {
+	padding-bottom: 3rem;
+	border-radius: 1rem 1rem 0 0;
+	box-shadow: 0 0 1rem rgba(255, 1, 1, 1);
 }
 #btnCopy{
 display: none;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?j29ap2');
+  src:  url('fonts/icomoon.eot?j29ap2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j29ap2') format('truetype'),
+    url('fonts/icomoon.woff?j29ap2') format('woff'),
+    url('fonts/icomoon.svg?j29ap2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
 }
