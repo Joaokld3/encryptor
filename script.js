@@ -39,6 +39,8 @@ function decrypt() {
   document.getElementById("answer").style.display = "inherit";
   document.getElementById("secure").style.display = "none";// the other two images dissapear
   document.getElementById("question").style.display = "none";
+  document.getElementById("inputText").value = "";
+  inputText.focus();
   }
 }
 function copy() {
